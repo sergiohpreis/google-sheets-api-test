@@ -1,3 +1,7 @@
+* {
+    transition: 0.3s ease-in-out;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -9,16 +13,57 @@ body {
 }
 
 .header {
-    background: #e8e8e8;
+    position: relative;
+    background: #27ae60;
     padding: 40px 0;
     box-shadow: 0px 0px 20px -3px #333;
+}
+
+.accountBox {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 40px;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.accountBox--visible {
+    max-height: 1000px;
+    padding-bottom: 10px;
+}
+
+.accountBox__image {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.accountBox__name {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    display: block;
+    margin-bottom: 5px;
+    color: #1f9852;
+    font-weight: bold;
+}
+
+.accountBox__email {
+    text-align: center;
+    display: block;
+    color: #1f9852;
+    font-style: italic;
 }
 
 .title {
     font-size: 30px;
     text-transform: uppercase;
     font-weight: bold;
-    color: #525252;
+    color: #fff;
 }
 
 .title--center {
@@ -31,4 +76,49 @@ body {
     display: block;
     text-transform: none;
     margin-top: 5px;
+    color: #1f9852;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.buttons .button + .button {
+    margin-left: 30px;
+}
+
+.button {
+    padding: 10px;
+    box-sizing: border-box;
+    border: 0;
+    min-width: 150px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 3px;
+    box-shadow: 0px 0px 12px -5px rgba(51, 51, 51, 0.4);
+    cursor: pointer;
+}
+
+.button--primary {
+    background: #3498db;
+    color: #fff;    
+}
+
+.button--primary:hover,
+.button--primary:active,
+.button--primary:focus {
+    background: #2980b9;
+}
+
+.button--secondary {
+    background: #e74c3c;
+    color: #fff;    
+}
+
+.button--secondary:hover,
+.button--secondary:active,
+.button--secondary:focus {
+    background: #c0392b;
 }
