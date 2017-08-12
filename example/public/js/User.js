@@ -86,18 +86,20 @@ class User {
 
     // Method responsible for fill the UI with the user data
     fillUserInfos(){
-        const name = this.googleUser.getName(),
-              email = this.googleUser.getEmail(),
-              imageUrl = this.googleUser.getImageUrl();
-        
-        const template = `
-        <div class="accountBox__image">
-            <img src="${imageUrl}" alt="Profile Imagem from ${name}">
-        </div>
-        <h3 class="accountBox__name">${name}</h3>
-        <small class="accountBox__email">${email}</small>`;
+        if (this.loginStatus) {  
+            const name = this.googleUser.getName(),
+                email = this.googleUser.getEmail(),
+                imageUrl = this.googleUser.getImageUrl();
+            
+            const template = `
+            <div class="accountBox__image">
+                <img src="${imageUrl}" alt="Profile Imagem from ${name}">
+            </div>
+            <h3 class="accountBox__name">${name}</h3>
+            <small class="accountBox__email">${email}</small>`;
 
-        this._element.innerHTML = template;
-        this._showUserInfos();
+            this._element.innerHTML = template;
+            this._showUserInfos();
+        };
     };
 };
