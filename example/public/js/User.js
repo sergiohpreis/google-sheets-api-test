@@ -84,6 +84,10 @@ class User {
         this._googleAuth = GoogleAuth;
     };
 
+    updateSignStatus(callback) {
+        gapi.auth2.getAuthInstance().isSignedIn.listen(callback);
+    };
+
     // Method responsible for fill the UI with the user data
     fillUserInfos(){
         if (this.loginStatus) {  

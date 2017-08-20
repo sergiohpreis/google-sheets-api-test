@@ -122,3 +122,32 @@ body {
 .button--secondary:focus {
     background: #c0392b;
 }
+
+.table--default {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.table--default tr:nth-child(odd) {
+    background: #3b423e;
+}
+
+.table--default td {
+    padding: 20px;
+    color: #fff;
+}
+
+.table--default thead tr:nth-child(odd) {
+    background: #27ae60;
+}
+
+.table--default thead th {
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.table--default tr:nth-child(even) {
+    background-color: #333;
+}

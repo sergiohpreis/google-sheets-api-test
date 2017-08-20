@@ -17,8 +17,13 @@ function initAPI(){
         user.signInButton = document.querySelector('#sign-in');
         user.signOutButton = document.querySelector('#sign-out');
         user.fillUserInfos();
-
-        const sheets = new Sheets();
-        sheets.getCatalog()
+        
+        const sheets = new Sheets(document.querySelector('#infos'));
+        sheets.configureButton({
+            button: document.querySelector('#get-infos'),
+            callback: () => {
+                return sheets.fillSheetData(user);
+            }
+        });
     });
 };
